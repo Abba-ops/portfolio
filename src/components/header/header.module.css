@@ -1,0 +1,84 @@
+header {
+    height: 100vh;
+    padding-top: 8rem;
+    overflow: hidden;
+    background: url(../../assets/wave.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+.c_t_a {
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: 3rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scroll__down {
+    position: absolute;
+    padding: 0 5px;
+    border-radius: 5px;
+    right: -2.3rem;
+    bottom: 5rem;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+}
+
+.my__image {
+    background: linear-gradient(to bottom,
+            var(--color-two),
+            var(--color-one),
+            transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 2rem;
+    border-radius: 65% 35% 67% 33% / 29% 66% 34% 71%;
+    overflow: hidden;
+}
+
+.my__image img {
+    height: 15rem;
+    border-bottom: 0.5px ridge var(--color-four), transparent;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+}

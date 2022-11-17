@@ -1,0 +1,42 @@
+nav {
+    background: var(--color-three);
+    width: max-content;
+    display: block;
+    padding: 0.5rem 1.5rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    border: 0.5px solid rgba(7, 7, 7, 0.12);
+    gap: 0.8rem;
+    border-radius: 3rem;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.15),
+        inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.55);
+}
+
+nav a {
+    background: transparent;
+    padding: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-four);
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    background: var(--color-two);
+    color: whitesmoke;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+}

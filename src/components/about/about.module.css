@@ -1,0 +1,153 @@
+.about__container {
+	display: grid;
+	grid-template-columns: 35% 50%;
+	gap: 10%;
+}
+
+.about__cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.about__card {
+	background: var(--color-three);
+	padding: 2rem;
+	text-align: center;
+	border: 2px solid rgba(7, 7, 7, 0.12);
+	border-radius: 2rem;
+	transition: var(--transition);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+		inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+		inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about__card:hover {
+	background: transparent;
+	cursor: default;
+	border-color: var(--color-two);
+}
+
+.about_icon {
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+	color: var(--color-two);
+}
+
+.about__card h5 {
+	font-size: 1rem;
+}
+
+.about__card small {
+	font-size: 0.7rem;
+}
+
+.about__content p {
+	margin: 2rem 0rem 2.6rem;
+	color: var(--color-four);
+}
+
+.container {
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+
+.wave {
+	float: left;
+	animation: wave ease-in-out 0.5s infinite alternate;
+	transform-origin: center -36px;
+}
+
+.wave:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+.wave img {
+	background: linear-gradient(to left, var(--color-two), var(--color-one));
+	border-radius: 2rem;
+	display: block;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+		inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+		inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+	/* box-shadow: 0 0 10px rgba(0, 0, 0, .25); */
+	border: 2px outset rgba(7, 7, 7, 0.12);
+	width: 200px;
+}
+
+.wave figcaption {
+	text-align: center;
+}
+
+.wave:after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 1.5px solid #ffffff;
+	top: -10px;
+	left: 50%;
+	border-bottom: none;
+	border-right: none;
+	transform: rotate(46deg);
+}
+
+.wave:before {
+	content: "";
+	position: absolute;
+	top: -23px;
+	left: 50%;
+	display: block;
+	height: 44px;
+	width: 47px;
+	background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	z-index: 16;
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(10deg);
+	}
+
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.about__container {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+
+	.about__me {
+		width: 50%;
+		margin: 2rem auto 4rem;
+	}
+
+	.about__content p {
+		margin: 1rem 0 1.5rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.about__me {
+		width: 65%;
+		margin: 0 auto 3rem;
+	}
+
+	.about__cards {
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.about__content {
+		text-align: center;
+	}
+
+	.about__content p {
+		margin: 1.5rem 0;
+	}
+}
