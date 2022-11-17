@@ -25,7 +25,7 @@ const data = [
 		id: 3,
 		image: project_three_image,
 		title: "This is a Portfolio application",
-		github: "",
+		github: "https://github.com/Abba-ops/My-portfolio",
 	},
 	{
 		id: 4,
@@ -43,7 +43,7 @@ const data = [
 		id: 6,
 		image: project_six_image,
 		title: "This is a Snake game",
-		github: "",
+		github: "https://github.com/Abba-ops/Snake-Game",
 	},
 ];
 
